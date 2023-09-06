@@ -1,15 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <meta charset="UTF-8">
-  <title>Page Title</title>
-  
-  <body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
 
-    <h1>I am the solution to HW1!</h1>
+    <nav class="top">
 
-    <p>
-        And I can link to <a href="./otherpage.html">other pages.</a>
-    </p>
+        <div class="nav-left">
+            <img src="../assets/logo/logo-01.svg" alt="" width="300" >
+        </div>
+        <div class="nav-right">
+            <div class="page-nav">
+                <a class="page-link" href="./otherpage.html">CART</a>
+                <a class="page-link" href="./otherpage.html">PRODUCTS</a>
+            </div>
+            <hr class="nav-break">
+            <h1 class="product-header">Our Hand-Made Cinnamon Rolls</h1>
+        </div>
+        
+    </nav>
+    
+    <body class="main">
 
-  </body>
+        <main class="body-content">
+            
+            
+            <section class="product-grid">
+
+                <div class="product-listing" id="product-1">
+                    <img class="product-photo" src="../assets/products/original-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Original Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity11" name="item-1-quantity" value="one"/><label for="quantity11">1</label>
+                                <input type="radio" id="quantity13" name="item-1-quantity" value="three"><label for="quantity13">3</label>
+                                <input type="radio" id="quantity16" name="item-1-quantity" value="six"><label for="quantity16">6</label>
+                                <input type="radio" id="quantity112" name="item-1-quantity" value="twelve"><label for="quantity112">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$2.49</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-2">
+                    <img class="product-photo" src="../assets/products/apple-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Apple Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity21" name="item-2-quantity" value="one"/><label for="quantity21">1</label>
+                                <input type="radio" id="quantity23" name="item-2-quantity" value="three"><label for="quantity23">3</label>
+                                <input type="radio" id="quantity26" name="item-2-quantity" value="six"><label for="quantity26">6</label>
+                                <input type="radio" id="quantity212" name="item-2-quantity" value="twelve"><label for="quantity212">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$3.49</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-3">
+                    <img class="product-photo" src="../assets/products/raisin-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Raisin Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity31" name="item-3-quantity" value="one"/><label for="quantity31">1</label>
+                                <input type="radio" id="quantity33" name="item-3-quantity" value="three"><label for="quantity33">3</label>
+                                <input type="radio" id="quantity36" name="item-3-quantity" value="six"><label for="quantity36">6</label>
+                                <input type="radio" id="quantity312" name="item-3-quantity" value="twelve"><label for="quantity312">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$3.75</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-4">
+                    <img class="product-photo" src="../assets/products/double-chocolate-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Chocolate Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity41" name="item-4-quantity" value="one"/><label for="quantity41">1</label>
+                                <input type="radio" id="quantity43" name="item-4-quantity" value="three"><label for="quantity43">3</label>
+                                <input type="radio" id="quantity46" name="item-4-quantity" value="six"><label for="quantity46">6</label>
+                                <input type="radio" id="quantity412" name="item-4-quantity" value="twelve"><label for="quantity412">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$3.75</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-5">
+                    <img class="product-photo" src="../assets/products/walnut-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Walnut Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity51" name="item-5-quantity" value="one"/><label for="quantity51">1</label>
+                                <input type="radio" id="quantity53" name="item-5-quantity" value="three"><label for="quantity53">3</label>
+                                <input type="radio" id="quantity56" name="item-5-quantity" value="six"><label for="quantity56">6</label>
+                                <input type="radio" id="quantity512" name="item-5-quantity" value="twelve"><label for="quantity512">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$3.75</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-6">
+                    <img class="product-photo" src="../assets/products/gluten-free-cinnamon-roll.jpg">
+                    <div class="product-data">
+                        <h2 class="product-label">Gluten Free Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                    <option value="keep-original">Keep Original</option>
+                                    <option value="sugar-milk">Sugar Milk</option>
+                                    <option value="vanilla-milk">Vanilla Milk</option>
+                                    <option value="double-chocolate">Double Chocolate</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector">
+                                <input type="radio" id="quantity61" name="item-6-quantity" value="one"/><label for="quantity61">1</label>
+                                <input type="radio" id="quantity63" name="item-6-quantity" value="three"><label for="quantity63">3</label>
+                                <input type="radio" id="quantity66" name="item-6-quantity" value="six"><label for="quantity66">6</label>
+                                <input type="radio" id="quantity612" name="item-6-quantity" value="twelve"><label for="quantity612">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag">$15.75</p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+        </main>
+
+    </body>
+
 </html>
+
