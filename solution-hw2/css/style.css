@@ -21,7 +21,7 @@ body{
     align-items: flex-end;
     width: 70%;
     margin: auto;
-    margin-right: 0%;
+
     margin-left: 2%;
 }
 
@@ -30,7 +30,7 @@ body{
     justify-content: right;
     align-content: center;
     margin-top: 10px;
-    margin-right: 1%;
+    margin-right: 5%;
     height: 25%;
 }
 
@@ -38,7 +38,7 @@ body{
     display: flex;
     flex-direction: column;
     position: relative;
-    margin-right: 1%;
+    margin-right: 5%;
     align-items: flex-end;
 }
 
@@ -52,7 +52,7 @@ body{
     display: flex;
     position: absolute;
     top: 3%;
-    left: 82%;
+    left: 78%;
     z-index: 999;
     justify-self: right;
     flex-direction: column;
@@ -95,7 +95,7 @@ body{
 
 .nav-break{
     display: flex;
-    margin-top: 20px;
+    margin-top: 0px;
     height: 5px;
     color: black;
     background-color: black;
@@ -104,7 +104,7 @@ body{
 
 .page-link{
     float: right;
-    margin: auto 0px 5px 50px;
+    margin: auto 0px 5px 100px;
     margin-bottom: 0;
     font-size: 20px;
     color: black;
@@ -185,14 +185,6 @@ body{
     outline: 2px solid #333;
     border-radius: 0;
     margin: 5px 2px 5px 5px;
-}
-
-.glazing-list option{
-    background-color: white;
-}
-
-.glazing-list option:hover{
-    background-color: white;
 }
 
 /* Source for radio styling https://codepen.io/w3programmings/pen/zzRKpy */
