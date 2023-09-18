@@ -49,7 +49,6 @@ body{
 }
 
 .pop-up{
-
     display: flex;
     position: absolute;
     top: 3%;
@@ -195,10 +194,6 @@ body{
 .glazing-list option:hover{
     background-color: white;
 }
-
-/* .glazing-list:hover{
-    background-color: yellow;
-} */
 
 /* Source for radio styling https://codepen.io/w3programmings/pen/zzRKpy */
 .selector label{
