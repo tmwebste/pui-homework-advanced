@@ -1,0 +1,179 @@
+/* Center everything in the body */
+body{
+    justify-content: center;
+    text-justify: center;
+    font-family: Arial, sans-serif;
+}
+
+.top{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+}
+
+.nav-left{
+    width: auto;
+}
+
+.nav-right{
+    justify-content: right;
+    width: 70%;
+    margin: auto;
+    margin-right: 0%;
+    margin-left: 2%;
+}
+
+.page-nav{
+    margin-right: 8%;
+}
+
+.nav-break{
+    display: flex;
+    margin-top: 50px;
+    height: 5px;
+    color: black;
+    background-color: black;
+    border:none;
+}
+
+.page-link{
+    float: right;
+    margin: auto 25px 5px 25px;
+    margin-bottom: 0;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.page-link:hover{
+    background-color: yellow;
+}
+
+
+.body-content{
+    display: flex;
+    justify-content: center;
+}
+
+/* Create and organize grid for product listings. Grid source https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
+.product-grid {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-areas: "Product-1   Product-2   Product-3" "Product-4   Product-5   Product-6";
+}
+  
+.product-listing{
+    margin: 30px;
+    width: fit-content;
+}
+
+.product-photo{
+    width: 250px;
+    height: 250px;
+    outline: 3px solid #333;
+}
+
+.product-data{
+    text-align: left;
+    justify-content: right;
+    margin: auto;
+}
+
+.product-label{
+    margin: 2px 5px 10px 0px;
+    font-size: 20px;
+}
+  
+.product-header{
+    text-align: left;
+    margin-top: 50px;
+}
+
+.product-quantity{
+    display: flex;
+    justify-content: right;
+}
+
+.select-tag{
+    margin: 2px 5px 2px 0px;
+    font-size: 18px;
+}
+
+.selector{
+    margin: 1px 0px 1px auto;
+    appearance: none;
+}
+
+.product-glazing{
+    display: flex;
+    justify-content: right;
+    text-align: left;
+}
+
+.glazing-list{
+    width: 128px;
+    margin: 1px 0px 1px auto;
+    border: none;
+    padding: 2px;
+    outline: 2px solid #333;
+    border-radius: 0;
+    margin: 5px 2px 5px 5px;
+}
+
+.glazing-list option{
+    background-color: white;
+}
+
+.glazing-list option:hover{
+    background-color: white;
+}
+
+.glazing-list:hover{
+    background-color: yellow;
+}
+
+/* Source for radio styling https://codepen.io/w3programmings/pen/zzRKpy */
+.selector label{
+    display: inline-block;
+    outline: 2px solid #333;
+    position: relative; 
+    width: 16px;
+    padding: 1px 5px 1px 5px;
+    margin: 5px 2px 5px 2px;
+    text-align: center;
+}
+
+.selector input[type="radio"] {
+    display: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 5px 5px 5px 5px;
+}
+
+.selector input[type='radio']:checked + label {
+    background: yellow;
+}
+
+.selector input[type='radio']:hover + label {
+    background: yellow;
+}
+
+.cart-add{
+    border: none;
+    width: 128px;
+    background-color: white;
+    margin: 5px 2px 1px auto;
+    outline: 2px solid #333;
+    padding: 2px 5px 2px 5px;
+}
+
+.cart-add:hover{
+    background-color: yellow;
+}
+
+.to-cart{
+    display: flex;
+    justify-content: right;
+}

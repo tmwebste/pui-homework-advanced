@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Homework 2</title>
+        <link href="./css/style.css" rel="stylesheet" type="text/css">
+        <script src="./js/script.js" defer></script>
+    </head>
+
+    <!-- Create nav bar -->
+    <nav class="top">
+
+        <div class="nav-left">
+            <img src="../assets/logo/logo-01.svg" alt="" width="300" >
+        </div>
+        <div class="nav-right">
+            <div class="page-nav">
+
+                <!-- Links go to dummy page -->
+                <a class="page-link" href="./otherpage.html">PRODUCTS</a>
+                <a class="page-link" href="./otherpage.html">CART</a>
+
+            </div>
+            <div class="cart-preview"> 
+                <p5 class="cart-datail" id="cart-quantity">0 Items</p5>
+                <p5 class="cart-datail" id="cart-total">Total: $0.00</p5>
+            </div>
+
+            <hr class="nav-break">
+            <h1 class="product-header">Our Hand-Made Cinnamon Rolls</h1>
+        </div>
+
+        <div class="pop-up hide" id="pop-up">
+            <p5 class="pop-up-line" id="added-to-cart-pop">Added to Cart: </p5>
+            <p5 class="pop-up-line" id="cart-product-name-pop">Product Name</p5>
+            <p5 class="pop-up-line" id="cart-glazing-type-pop">Glazing Type</p5>
+            <p5 class="pop-up-line" id="cart-quantity-pop">Pack of</p5>
+            <p5 class="pop-up-line" id="cart-price-pop">Price: </p5>
+        </div>
+    </nav>
+   
+
+    
+    <body class="main">
+
+        <main class="body-content">
+            
+            <!-- make grid for products -->
+            <section class="product-grid">
+
+                <!-- Create div for individual product lising -->
+                <div class="product-listing" id="product-1">
+                    <img class="product-photo" src="../assets/products/original-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=2.49>
+                        <h2 class="product-label">Original Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <!-- Create drop down for glazing options -->
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <!-- Radio for quantity -->
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity11" name="item-1-quantity" value="1"/><label for="quantity11">1</label>
+                                <input type="radio" id="quantity13" name="item-1-quantity" value="3"><label for="quantity13">3</label>
+                                <input type="radio" id="quantity16" name="item-1-quantity" value="6"><label for="quantity16">6</label>
+                                <input type="radio" id="quantity112" name="item-1-quantity" value="12"><label for="quantity112">12</label>
+                            </form>
+                        </div>
+                        <!-- Price and add to cart -->
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-2">
+                    <img class="product-photo" src="../assets/products/apple-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=3.49>
+                        <h2 class="product-label">Apple Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity21" name="item-2-quantity" value="1"/><label for="quantity21">1</label>
+                                <input type="radio" id="quantity23" name="item-2-quantity" value="3"><label for="quantity23">3</label>
+                                <input type="radio" id="quantity26" name="item-2-quantity" value="6"><label for="quantity26">6</label>
+                                <input type="radio" id="quantity212" name="item-2-quantity" value="12"><label for="quantity212">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-3">
+                    <img class="product-photo" src="../assets/products/raisin-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=3.75>
+                        <h2 class="product-label">Raisin Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity31" name="item-3-quantity" value="1"/><label for="quantity31">1</label>
+                                <input type="radio" id="quantity33" name="item-3-quantity" value="3"><label for="quantity33">3</label>
+                                <input type="radio" id="quantity36" name="item-3-quantity" value="6"><label for="quantity36">6</label>
+                                <input type="radio" id="quantity312" name="item-3-quantity" value="12"><label for="quantity312">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-4">
+                    <img class="product-photo" src="../assets/products/double-chocolate-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=3.75>
+                        <h2 class="product-label">Chocolate Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity41" name="item-4-quantity" value="1"/><label for="quantity41">1</label>
+                                <input type="radio" id="quantity43" name="item-4-quantity" value="3"><label for="quantity43">3</label>
+                                <input type="radio" id="quantity46" name="item-4-quantity" value="6"><label for="quantity46">6</label>
+                                <input type="radio" id="quantity412" name="item-4-quantity" value="12"><label for="quantity412">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-5">
+                    <img class="product-photo" src="../assets/products/walnut-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=3.75>
+                        <h2 class="product-label">Walnut Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity51" name="item-5-quantity" value="1"/><label for="quantity51">1</label>
+                                <input type="radio" id="quantity53" name="item-5-quantity" value="3"><label for="quantity53">3</label>
+                                <input type="radio" id="quantity56" name="item-5-quantity" value="6"><label for="quantity56">6</label>
+                                <input type="radio" id="quantity512" name="item-5-quantity" value="12"><label for="quantity512">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing" id="product-6">
+                    <img class="product-photo" src="../assets/products/gluten-free-cinnamon-roll.jpg"/>
+                    <div class="product-data" data-value=4.75>
+                        <h2 class="product-label">Gluten Free Cinnamon Roll</h2>
+                        <div class="product-glazing">
+                            <p2 class="select-tag">Glazing:</p2>
+                            <span class="selector">
+                                <select class="glazing-list" id="glazing1">
+                                </select>
+                            </span>
+                        </div>
+                        <div class="product-quantity">
+                            <p2 class="select-tag">Pack Size:</p2>
+                            <form class="selector quantity-selector">
+                                <input type="radio" id="quantity61" name="item-6-quantity" value="1"/><label for="quantity61">1</label>
+                                <input type="radio" id="quantity63" name="item-6-quantity" value="3"><label for="quantity63">3</label>
+                                <input type="radio" id="quantity66" name="item-6-quantity" value="6"><label for="quantity66">6</label>
+                                <input type="radio" id="quantity612" name="item-6-quantity" value="12"><label for="quantity612">12</label>
+                            </form>
+                        </div>
+                        <div class="to-cart">
+                            <p2 class="select-tag price"></p2>
+                            <button class="cart-add">ADD TO CART</button>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+    </body>
+
+</html>
+
