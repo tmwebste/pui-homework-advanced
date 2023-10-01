@@ -1,6 +1,8 @@
 import React from 'react';
-import './App.css';
 import HomePage from './views/home';
+import './App.css';
+import './navBar.css';
+import './rollCard.css'
 
 function App() {
   return (

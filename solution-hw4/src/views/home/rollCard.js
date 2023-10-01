@@ -7,15 +7,13 @@ class RollCard extends Component {
         this.state = {
           totalPrice: this.props.totalPrice
         };   
-        console.log("print the this.propstotalprice", this.props.totalPrice); 
+        // console.log("print the this.propstotalprice", this.props.totalPrice); 
         // this.calculatePrice = this.calculatePrice.bind(this);
         // this.totalPrice = this.totalPrice.bind(this);
     } 
 
-
-    
     render() {
-        console.log("enter the price", this.state.totalPrice)
+        // console.log("enter the price", this.state.totalPrice)
         return (
             // <!-- Create div for individual product lising -->
             <div className="product-listing" id="product-1">
@@ -26,28 +24,28 @@ class RollCard extends Component {
                         <p className="select-tag">Glazing:</p>
                         {/*Create drop down for glazing options */}
                         <span className="selector" >
-                            <select className="glazing-list" onChange={this.props.glazingChange} id="glazing1">
-                                <option value="keep-original">Keep Original</option>
-                                <option value="sugar-milk">Sugar Milk</option>
-                                <option value="vanilla-milk">Vanilla Milk</option>
-                                <option value="double-chocolate">Double Chocolate</option>
+                            <select className="glazing-list" onChange={(e) => this.props.glazingChange(e, this.props.rollIndex)} id="glazing1">
+                                <option value="0" data-name="Original">Keep Original</option>
+                                <option value="0" data-name="Sugar Milk">Sugar Milk</option>
+                                <option value="0.5" data-name="Vanilla Milk">Vanilla Milk</option>
+                                <option value="1.5" data-name="Double Chocolate">Double Chocolate</option>
                             </select>
                         </span>
                     </div>
                     <div className="product-quantity">
-                        <p2 className="select-tag">Pack Size:</p2>
+                        <p className="select-tag">Pack Size:</p>
                         {/* Radio for quantity */}
-                        <form className="selector ">
-                            <input type="radio" id={`quantity1${this.props.rollIndex}`} name='item-quantity' value="1" /><label for={`quantity1${this.props.rollIndex}`}>1</label>
-                            <input type="radio" id={`quantity3${this.props.rollIndex}`} name='item-quantity' value="3" /><label for={`quantity3${this.props.rollIndex}`}>3</label>
-                            <input type="radio" id={`quantity6${this.props.rollIndex}`} name='item-quantity' value="5" /><label for={`quantity6${this.props.rollIndex}`}>6</label>
-                            <input type="radio" id={`quantity12${this.props.rollIndex}`} name='item-quantity' value="10" /><label for={`quantity12${this.props.rollIndex}`}>12</label>
+                        <form className="selector " onChange={(e) => this.props.quantityChange(e, this.props.rollIndex)}>
+                            <input type="radio" id={`quantity1${this.props.rollIndex}`} name='item-quantity' value="1" /><label htmlFor={`quantity1${this.props.rollIndex}`}>1</label>
+                            <input type="radio" id={`quantity3${this.props.rollIndex}`} name='item-quantity' value="3" /><label htmlFor={`quantity3${this.props.rollIndex}`}>3</label>
+                            <input type="radio" id={`quantity6${this.props.rollIndex}`} name='item-quantity' value="5" /><label htmlFor={`quantity6${this.props.rollIndex}`}>6</label>
+                            <input type="radio" id={`quantity12${this.props.rollIndex}`} name='item-quantity' value="10" /><label htmlFor={`quantity12${this.props.rollIndex}`}>12</label>
                         </form>
                     </div>
                     {/* Price and add to cart */}
                     <div className="to-cart">
-                        <p className="select-tag">${this.state.totalPrice}</p>
-                        <button className="cart-add" >ADD TO CART</button>
+                        <p className="select-tag">${this.props.totalPrice.toFixed(2)}</p>
+                        <button className="cart-add" onClick={(e) => this.props.cartAdd(this.props.rollIndex)} >ADD TO CART</button>
                     </div>
                 </div>
             </div>

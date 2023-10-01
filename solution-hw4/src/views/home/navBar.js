@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 // Create NavBar Component
 class NavBar extends Component {
+
   render() {
     return (
     // Create nav bar
@@ -19,21 +20,14 @@ class NavBar extends Component {
 
               </div>
               <div className="cart-preview"> 
-                  <p5 className="cart-datail" id="cart-quantity">{this.props.cartQuantity} Items</p5>
-                  <p5 className="cart-datail" id="cart-total">Total: ${this.props.cartTotal.toFixed(2)}</p5>
+                  <p className="cart-detail" id="cart-quantity">{this.props.cartQuantity} Items</p>
+                  <p className="cart-detail" id="cart-total">Total: ${this.props.cartTotal.toFixed(2)}</p>
               </div>
 
               <hr className="nav-break"/>
               <h1 className="product-header">Our Hand-Made Cinnamon Rolls</h1>
           </div>
 
-          <div className="pop-up hide" id="pop-up">
-              <p5 className="pop-up-line" id="added-to-cart-pop">Added to Cart: </p5>
-              <p5 className="pop-up-line" id="cart-product-name-pop">Product Name</p5>
-              <p5 className="pop-up-line" id="cart-glazing-type-pop">Glazing Type</p5>
-              <p5 className="pop-up-line" id="cart-quantity-pop">Pack of</p5>
-              <p5 className="pop-up-line" id="cart-price-pop">Price: </p5>
-          </div>
       </nav>
     );
   }

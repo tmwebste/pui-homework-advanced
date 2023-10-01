@@ -1,6 +1,5 @@
 /* Center everything in the body */
 body{
-  
   justify-content: center;
   text-justify: center;
   font-family: Arial, sans-serif;
@@ -10,51 +9,6 @@ body{
   display: flex;
   justify-content: center;
   margin: 0px 5% 0px 5%;
-}
-
-.top{
-  display: flex;
-  justify-self: center;
-  justify-content: center;
-  margin: 10px 1% 0px 1%;
-  /* width: 100%; */
-}
-
-.nav-left{
-  width: auto;
-  margin-left: 1%;
-}
-
-.nav-right{
-  justify-content: right;
-  align-content: top;
-  align-items: flex-end;
-  width: 70%;
-  margin: auto;
-  margin-left: 2%;
-}
-
-.page-nav{
-  display: flex;
-  justify-content: right;
-  align-content: center;
-  margin-top: 10px;
-  margin-right: 5%;
-  height: 25%;
-}
-
-.cart-preview{
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-right: 5%;
-  align-items: flex-end;
-}
-
-.cart-detail{
-  position:relative;
-  text-align: right;
-  
 }
 
 .pop-up{
@@ -75,23 +29,12 @@ body{
   text-align: left;
 }
 
-.show{
-  visibility: visible;
-  opacity: 1;
-  transition: opacity 400ms linear;
-}
-
-.hide{
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s 400ms, opacity 400ms linear;
-}
-
 .pop-up-line{
   position: relative;
   text-align: left;
   margin-left: 5px;
-  margin-top: 5px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 #added-to-cart-pop{
@@ -102,29 +45,6 @@ body{
   font-weight:700;
 }
 
-.nav-break{
-  display: flex;
-  margin-top: 0px;
-  height: 5px;
-  color: black;
-  background-color: black;
-  border:none;
-}
-
-.page-link{
-  float: right;
-  margin: auto 0px 5px 100px;
-  margin-bottom: 0;
-  font-size: 20px;
-  color: black;
-  text-decoration: none;
-}
-
-.page-link:hover{
-  background-color: yellow;
-}
-
-
 /* Create and organize grid for product listings. Grid source https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
 .product-grid {
   display:grid;
@@ -133,112 +53,5 @@ body{
   grid-template-areas: "Product-1   Product-2   Product-3" "Product-4   Product-5   Product-6";
 }
 
-.product-listing{
-  margin: 30px;
-  width: fit-content;
-}
 
-.product-photo{
-  width: 250px;
-  height: 250px;
-  outline: 3px solid #333;
-}
 
-.product-data{
-  text-align: left;
-  justify-content: right;
-  margin: auto;
-}
-
-.product-label{
-  margin: 2px 0px 10px 0px;
-  font-size: 20px;
-}
-
-.product-header{
-  text-align: left;
-  margin-top: 50px;
-}
-
-.product-quantity{
-  display: flex;
-  justify-content: right;
-}
-
-.select-tag{
-  display: flex;
-  width: 50%;
-  margin: 2px 0px 2px 0px;
-  font-size: 18px;
-}
-
-.selector{
-  display: flex;
-  justify-content: space-between;
-  margin: 1px 0px 1px auto;
-  width: 50%;
-  appearance: none;
-}
-
-.product-glazing{
-  display: flex;
-  justify-content: right;
-  text-align: left;
-}
-
-.glazing-list{
-  width: 100%;
-  /* margin: 1px 0px 1px auto; */
-  border: none;
-  padding: 2px;
-  border: 2px solid #333;
-  border-radius: 0;
-  margin: 5px auto 5px auto;
-}
-
-/* Source for radio styling https://codepen.io/w3programmings/pen/zzRKpy */
-.selector label{
-  display: inline-block;
-  outline: 2px solid #333;
-  position: relative; 
-  width: 16px;
-  padding: 1px 5px 1px 5px;
-  margin: 5px 2px 5px 2px;
-  text-align: center;
-}
-
-.selector input[type="radio"] {
-  display: none;
-  width: 16px;
-  height: 16px;
-  padding: 0;
-  /* margin: 5px 5px 5px 5px; */
-}
-
-.selector input[type='radio']:checked + label {
-  background: grey;
-}
-
-.selector input[type='radio']:hover + label {
-  background: grey;
-}
-
-.cart-add{
-  border: none;
-  justify-content: right;
-  width: 50%;
-  background-color: white;
-  margin: 5px 0px 1px auto; 
-  border: 2px solid #333;
-  padding: 2px 0px 2px 0px;
-}
-
-.cart-add:hover{
-  background-color: yellow;
-}
-
-.to-cart{
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
