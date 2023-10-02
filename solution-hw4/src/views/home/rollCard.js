@@ -7,13 +7,9 @@ class RollCard extends Component {
         this.state = {
           totalPrice: this.props.totalPrice
         };   
-        // console.log("print the this.propstotalprice", this.props.totalPrice); 
-        // this.calculatePrice = this.calculatePrice.bind(this);
-        // this.totalPrice = this.totalPrice.bind(this);
     } 
 
     render() {
-        // console.log("enter the price", this.state.totalPrice)
         return (
             // <!-- Create div for individual product lising -->
             <div className="product-listing" id="product-1">

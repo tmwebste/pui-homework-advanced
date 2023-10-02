@@ -8,6 +8,7 @@ class HomePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Set default state for each roll
       rollCardData: [
         {
           imageURL: "assets/products/original-cinnamon-roll.jpg",
@@ -71,11 +72,13 @@ class HomePage extends Component {
         },
       ],  
 
+      // Create state for navbardata
       navBarData: {
           cartQuantity: 0,
           cartTotal: 0.00,
       },
       
+      // Create state for pop-up
       popUpData:{
         showPopup: false,
         productName: null,
@@ -84,18 +87,21 @@ class HomePage extends Component {
         price: null,
       },
 
-
+      // Create cart items list
+      cartItems: [
+        
+      ]
     }
   }
 
-  // Place Holder Functions
+  // Callback for when glazing is selected
   handleGlazingChange = (event, index) => {
     const glazing = parseFloat(event.target.value);
     const glazingName = event.target.options[event.target.selectedIndex].text;
-    
-    console.log(glazingName);
 
     const newPrice = (this.state.rollCardData[index].price+ glazing) * this.state.rollCardData[index].quantitySelection;
+
+    // Duplicate current state to update and overwrite old
     const updatedRollCardData = [...this.state.rollCardData];
 
     updatedRollCardData[index].glazingSelection = glazing;
@@ -107,7 +113,9 @@ class HomePage extends Component {
     });
   }
   
+  // Callback for when the user selects a quantity
   handleQuantityChange = (event, index) => {
+    // Added this dict to get appropriate state data for future update of the cart preview in navbar
     const quantityDict = {1: 1, 3: 3, 5: 6, 10: 12};
     const quantity = parseInt(event.target.value);
     const actualQuantity = quantityDict[quantity];
@@ -123,17 +131,29 @@ class HomePage extends Component {
     });
   }
 
+  // Callback for when the add to cart button is pressed
   cartButtonHandler = (index) => {
 
     const updatedNavBarData = this.state.navBarData;
+    const updatedCartItems = this.state.cartItems;
+
+    const rollName = this.state.rollCardData[index].rollName;
+    const glazing = this.state.rollCardData[index].glazingName;
+    const quantity = this.state.rollCardData[index].actualQuantity;
     const priceToAdd = this.state.rollCardData[index].totalPrice;
 
     updatedNavBarData.cartTotal += priceToAdd;
     updatedNavBarData.cartQuantity += 1;
 
+    // Add roll to the cart items list and later add to state
+    const cartItem = { name: rollName, glazing: glazing, quantity: quantity };
+    updatedCartItems.push(cartItem);
+
     this.setState({ 
       navBarData: updatedNavBarData,
+      cartItems: updatedCartItems,
       popUpData: {
+        // Show the pop-up
         showPopup: true,
         productName: this.state.rollCardData[index].rollName,
         glazingType: this.state.rollCardData[index].glazingName,
@@ -142,6 +162,7 @@ class HomePage extends Component {
       },
     });
 
+    // Add timeout so the pop-up dissapears after 3s
     setTimeout(() => {
       this.setState({ 
         popUpData: {
@@ -153,7 +174,6 @@ class HomePage extends Component {
         },
       });
     }, 3000); 
-
   };
 
   render() {
@@ -167,7 +187,7 @@ class HomePage extends Component {
         cartTotal={this.state.navBarData.cartTotal}
       />
 
-      {/* conditional pop-up */}
+      {/* conditional pop-up - adding to index.js */}
       {this.state.popUpData.showPopup && (
         <div className="pop-up" id="pop-up">
             <p className="pop-up-line" id="added-to-cart-pop">Added to Cart:</p>
@@ -181,10 +201,10 @@ class HomePage extends Component {
       <div className='body-content'>
         <div className='product-grid'>
 
-          {/* Create RollCards */}
+          {/* Create RollCards via Map */}
           {this.state.rollCardData.map((rollCard, idx) => {
               return <RollCard 
-                key={idx} 
+                key={idx} //Added key param because React was yelling at me
                 rollIndex={idx}
                 imageURL={rollCard.imageURL}
                 rollName={rollCard.rollName}
@@ -200,7 +220,6 @@ class HomePage extends Component {
 
         </div>
       </div>
-      
     </div>
   );
   }

@@ -6,6 +6,7 @@ import './rollCard.css'
 
 function App() {
   return (
+    // render homepage view from views/home/index.js
     <HomePage/>
   );
 }

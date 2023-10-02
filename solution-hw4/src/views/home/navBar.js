@@ -20,6 +20,7 @@ class NavBar extends Component {
 
               </div>
               <div className="cart-preview"> 
+                  {/* Pull in cart data passed by indez.js */}
                   <p className="cart-detail" id="cart-quantity">{this.props.cartQuantity} Items</p>
                   <p className="cart-detail" id="cart-total">Total: ${this.props.cartTotal.toFixed(2)}</p>
               </div>
