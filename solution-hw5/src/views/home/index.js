@@ -17,7 +17,7 @@ class HomePage extends Component {
           rollName: "Original Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 2.49,
           totalPrice: 2.49,
@@ -28,7 +28,7 @@ class HomePage extends Component {
           rollName: "Apple Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 3.49,
           totalPrice: 3.49,
@@ -39,7 +39,7 @@ class HomePage extends Component {
           rollName: "Raisin Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 3.75,
           totalPrice: 3.75,
@@ -50,7 +50,7 @@ class HomePage extends Component {
           rollName:"Chocolate Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 3.75,
           totalPrice: 3.75,
@@ -61,7 +61,7 @@ class HomePage extends Component {
           rollName: "Walnut Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 3.75,
           totalPrice: 3.75,
@@ -72,7 +72,7 @@ class HomePage extends Component {
           rollName: "Gluten Free Cinnamon Roll",
           glazingSelection: 0,
           glazingName: "Oiginal",
-          quantitySelection: 1,
+          quantitySelection: null,
           actualQuantity: 1,
           price: 4.75,
           totalPrice: 4.75,
@@ -105,7 +105,7 @@ class HomePage extends Component {
       
       showCart:false,
       sortBy: 'name',
-      noFoundSearch:true,
+      noFoundSearch: false,
 
     }
   }
@@ -146,6 +146,7 @@ class HomePage extends Component {
     this.setState({ 
       rollCardData: updatedRollCardData 
     });
+    console.log(this.state.rollCardData[index]);
   }
 
   // Callback for when the add to cart button is pressed

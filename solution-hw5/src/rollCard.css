@@ -79,14 +79,14 @@
     padding: 0;
     /* margin: 5px 5px 5px 5px; */
 }
-
+/* 
 .selector input[type='radio']:checked + label {
     background: grey;
 }
 
 .selector input[type='radio']:hover + label {
     background: grey;
-}
+} */
 
 .cart-add{
     border: none;

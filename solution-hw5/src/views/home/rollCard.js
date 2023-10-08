@@ -5,8 +5,8 @@ class RollCard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-          totalPrice: this.props.totalPrice
-        };   
+          totalPrice: this.props.totalPrice,
+        };  
     } 
 
     render() {
@@ -33,10 +33,14 @@ class RollCard extends Component {
                         <p className="select-tag">Pack Size:</p>
                         {/* Radio for quantity */}
                         <form className="selector " onChange={(e) => this.props.quantityChange(e, this.props.rollIndex)}>
-                            <input type="radio" id={`quantity1${this.props.rollIndex}`} name='item-quantity' value="1" /><label htmlFor={`quantity1${this.props.rollIndex}`}>1</label>
-                            <input type="radio" id={`quantity3${this.props.rollIndex}`} name='item-quantity' value="3" /><label htmlFor={`quantity3${this.props.rollIndex}`}>3</label>
-                            <input type="radio" id={`quantity6${this.props.rollIndex}`} name='item-quantity' value="5" /><label htmlFor={`quantity6${this.props.rollIndex}`}>6</label>
-                            <input type="radio" id={`quantity12${this.props.rollIndex}`} name='item-quantity' value="10" /><label htmlFor={`quantity12${this.props.rollIndex}`}>12</label>
+                            <input type="radio" id={`quantity1${this.props.rollIndex}`} name='item-quantity' value="1" />
+                                <label htmlFor={`quantity1${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 1 ? 'LightGray' : 'white'}}>1</label>
+                            <input type="radio" id={`quantity3${this.props.rollIndex}`} name='item-quantity' value="3" />
+                                <label htmlFor={`quantity3${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 3 ? 'LightGray' : 'white'}}>3</label>
+                            <input type="radio" id={`quantity6${this.props.rollIndex}`} name='item-quantity' value="5" />
+                                <label htmlFor={`quantity6${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 5 ? 'LightGray' : 'white'}}>6</label>
+                            <input type="radio" id={`quantity12${this.props.rollIndex}`} name='item-quantity' value="10" />
+                                <label htmlFor={`quantity12${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 10 ? 'LightGray' : 'white'}}>12</label>
                         </form>
                     </div>
                     {/* Price and add to cart */}

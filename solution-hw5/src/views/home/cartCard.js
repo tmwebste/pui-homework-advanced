@@ -8,7 +8,7 @@ class CartCard extends Component {
     // Create nav bar
         <section className="cart-item">
             <div className='card-image'>
-                <img className="cart-product-image" src={this.props.productImage}></img>
+                <img className="cart-product-image" src={this.props.productImage} alt="product"></img>
             </div>
             <div className="cart-product-data">
                 <h1>{this.props.productName}</h1>
