@@ -146,7 +146,6 @@ class HomePage extends Component {
     this.setState({ 
       rollCardData: updatedRollCardData 
     });
-    console.log(this.state.rollCardData[index]);
   }
 
   // Callback for when the add to cart button is pressed
@@ -198,12 +197,14 @@ class HomePage extends Component {
     }, 3000); 
   };
 
+  //Callback for when someone clicks the cart button in the navbar
   cartLinkHandler = (e) => {
     this.setState({ 
       showCart: !this.state.showCart
     });
   }
 
+  //Callback to remove an item in the cart display
   cartRemoveHandler = (e, index) => {
     const updatedCartItems = this.state.cartItems;
     
@@ -219,6 +220,7 @@ class HomePage extends Component {
     });
   }
 
+  //Callback for when someone selects a sort option
   handleSortChange = (e) => {
     const sortBy = e.target.value;
     const sortedRolls = [...this.state.rollCardData];
@@ -235,6 +237,7 @@ class HomePage extends Component {
     });
   };
 
+  //Call back to handle search and set each roll to show or not if it is a match
   handleSearch = (e) => {
     const parent = e.target.parentNode;
     const query = parent.querySelector('#searchbar').value;

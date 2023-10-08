@@ -13,7 +13,7 @@ class CartDisplay extends Component {
         {this.props.cartQuantity > 0 ? (
           <div className='cart-data'>
             <div className="cart-preview"> 
-              {/* Pull in cart data passed by indez.js */}
+              {/* Pull in cart data passed by index.js */}
               <p className="cart-quantity" id="cart-quantity">Shopping Cart ({this.props.cartQuantity} Item{this.props.cartQuantity > 1 && 's'})</p>
               <p className="cart-total" id="cart-total">Total: ${this.props.cartTotal.toFixed(2)}</p>
             </div>

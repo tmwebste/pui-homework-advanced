@@ -34,7 +34,8 @@ class RollCard extends Component {
                         {/* Radio for quantity */}
                         <form className="selector " onChange={(e) => this.props.quantityChange(e, this.props.rollIndex)}>
                             <input type="radio" id={`quantity1${this.props.rollIndex}`} name='item-quantity' value="1" />
-                                <label htmlFor={`quantity1${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 1 ? 'LightGray' : 'white'}}>1</label>
+                                {/* conditional styling for radio labels */}
+                                <label htmlFor={`quantity1${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 1 ? 'LightGray' : 'white'}}>1</label> 
                             <input type="radio" id={`quantity3${this.props.rollIndex}`} name='item-quantity' value="3" />
                                 <label htmlFor={`quantity3${this.props.rollIndex}`} style={{background: this.props.quantitySelection === 3 ? 'LightGray' : 'white'}}>3</label>
                             <input type="radio" id={`quantity6${this.props.rollIndex}`} name='item-quantity' value="5" />
