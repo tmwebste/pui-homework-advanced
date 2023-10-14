@@ -1,0 +1,109 @@
+.product-listing{
+    margin: 30px;
+    width: fit-content;
+}
+
+.product-photo{
+    width: 250px;
+    height: 250px;
+    outline: 3px solid #333;
+}
+
+.product-data{
+    text-align: left;
+    justify-content: right;
+    margin: auto;
+}
+
+.product-label{
+    margin: 2px 0px 10px 0px;
+    font-size: 20px;
+}
+
+.product-header{
+    text-align: left;
+    margin-top: 50px;
+}
+
+.product-quantity{
+    display: flex;
+    justify-content: right;
+}
+
+.select-tag{
+    display: flex;
+    width: 50%;
+    margin: 2px 0px 2px 0px;
+    font-size: 18px;
+}
+
+.selector{
+    display: flex;
+    justify-content: space-between;
+    margin: 1px 0px 1px auto;
+    width: 50%;
+    appearance: none;
+}
+
+.product-glazing{
+    display: flex;
+    justify-content: right;
+    text-align: left;
+}
+
+.glazing-list{
+    width: 100%;
+    /* margin: 1px 0px 1px auto; */
+    border: none;
+    padding: 2px;
+    border: 2px solid #333;
+    border-radius: 0;
+    margin: 5px auto 5px auto;
+}
+
+/* Source for radio styling https://codepen.io/w3programmings/pen/zzRKpy */
+.selector label{
+    display: inline-block;
+    outline: 2px solid #333;
+    position: relative; 
+    width: 16px;
+    padding: 1px 5px 1px 5px;
+    margin: 5px 2px 5px 2px;
+    text-align: center;
+    }
+
+.selector input[type="radio"] {
+    display: none;
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    /* margin: 5px 5px 5px 5px; */
+}
+/* 
+.selector input[type='radio']:checked + label {
+    background: grey;
+}
+
+.selector input[type='radio']:hover + label {
+    background: grey;
+} */
+
+.cart-add{
+    border: none;
+    justify-content: right;
+    width: 50%;
+    background-color: white;
+    margin: 5px 0px 1px auto; 
+    border: 2px solid #333;
+    padding: 2px 0px 2px 0px;
+}
+
+.cart-add:hover{
+    background-color: yellow;
+}
+
+.to-cart{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
