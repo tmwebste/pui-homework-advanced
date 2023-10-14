@@ -4,18 +4,26 @@ import CartCard from './cartCard';
 // Create NavBar Component
 class CartDisplay extends Component {
 
+  getCartTotal = () =>{
+    let total = 0;
+    for(const item of this.props.cartItems){
+      total += item.price;
+    }
+    return total
+  }
+
   render() {
     return (
     // Create nav bar
       <section className="cart">
         <hr className="nav-break"/>
 
-        {this.props.cartQuantity > 0 ? (
+        {this.props.cartItems.length > 0 ? (
           <div className='cart-data'>
             <div className="cart-preview"> 
               {/* Pull in cart data passed by indez.js */}
-              <p className="cart-quantity" id="cart-quantity">Shopping Cart ({this.props.cartQuantity} Item{this.props.cartQuantity > 1 && 's'})</p>
-              <p className="cart-total" id="cart-total">Total: ${this.props.cartTotal.toFixed(2)}</p>
+              <p className="cart-quantity" id="cart-quantity">Shopping Cart ({this.props.cartItems.length} Item{this.props.cartItems.length > 1 && 's'})</p>
+              <p className="cart-total" id="cart-total">Total: ${this.getCartTotal().toFixed(2)}</p>
             </div>
             <section className="cart-section">
               <section className="cart-grid">

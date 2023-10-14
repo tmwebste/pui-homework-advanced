@@ -9,6 +9,8 @@ class HomePage extends Component {
 
   constructor(props) {
     super(props);
+    const storedCart = localStorage.getItem('cart');
+    // console.log(storedCart);
     this.state = {
       // Set default state for each roll
       rollCardData: [
@@ -96,9 +98,7 @@ class HomePage extends Component {
       },
 
       // Create cart items list
-      cartItems: [
-        
-      ],
+      cartItems: storedCart ? JSON.parse(storedCart) : [],
 
       cartQuantity: 0,
       cartTotal: 0.00,
@@ -110,6 +110,27 @@ class HomePage extends Component {
     }
   }
 
+  // Store cartdata to local storage
+  storeCartInLocalStorage = () => {
+    const serializedCart = JSON.stringify(this.state.cartItems);
+    localStorage.setItem('cart', serializedCart);
+  }
+
+  getCartFromLocalStorage = () =>{
+    const storedCart = localStorage.getItem('cart');
+    if (storedCart) {
+      // If there's a cart in localStorage, deserialize it and update the state
+      const cartItems = JSON.parse(storedCart);
+      this.setState({
+        cartItems,
+      });
+    }
+  }
+
+  componentDidMount() {
+    // Retrieve the cart from localStorage
+    this.getCartFromLocalStorage();
+  }
 
   // Callback for when glazing is selected
   handleGlazingChange = (event, index) => {
@@ -146,7 +167,6 @@ class HomePage extends Component {
     this.setState({ 
       rollCardData: updatedRollCardData 
     });
-    console.log(this.state.rollCardData[index]);
   }
 
   // Callback for when the add to cart button is pressed
@@ -168,6 +188,7 @@ class HomePage extends Component {
     // Add roll to the cart items list and later add to state
     const cartItem = { productImage: productImage, name: rollName, glazing: glazing, quantity: quantity, price: priceToAdd };
     updatedCartItems.push(cartItem);
+    
     // console.log(updatedCartItems);
     this.setState({ 
       navBarData: updatedNavBarData,
@@ -183,7 +204,7 @@ class HomePage extends Component {
         price: priceToAdd.toFixed(2),
       },
     });
-
+    this.storeCartInLocalStorage();
     // Add timeout so the pop-up dissapears after 3s
     setTimeout(() => {
       this.setState({ 
@@ -199,6 +220,7 @@ class HomePage extends Component {
   };
 
   cartLinkHandler = (e) => {
+    
     this.setState({ 
       showCart: !this.state.showCart
     });
@@ -210,13 +232,13 @@ class HomePage extends Component {
     const newCartTotal = this.state.cartTotal - updatedCartItems[index].price;
     updatedCartItems.splice(index, 1);
     const newCartQuantity = updatedCartItems.length;
-
     this.setState({ 
       cartItems: updatedCartItems, 
       cartQuantity: newCartQuantity,
       cartTotal: newCartTotal,
       
     });
+    this.storeCartInLocalStorage();
   }
 
   handleSortChange = (e) => {
